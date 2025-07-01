@@ -61,6 +61,9 @@
                             <li><a class="dropdown-item" href="categorias/esportivos.html">Carros Esportivos</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="motos.html">MOTOS</a>
+                    </li>
 
                 </ul>
                 <form class="d-flex" role="search" onsubmit="return pesquisar();">
@@ -82,66 +85,66 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
     <script>
-    const rotas = {
-        "toyota": "marcas/toyota.html",
-        "volkswagen": "marcas/volks.html",
-        "ford": "marcas/ford.html",
-        "chevrolet": "marcas/chevy.html",
-        "chevy": "marcas/chevy.html",
-        "honda": "marcas/honda.html",
-        "mercedes": "marcas/mercedes.html",
-        "mercedes-benz": "marcas/mercedes.html",
-        "bmw": "marcas/bmw.html",
-        "hyundai": "marcas/hyundai.html",
-        "audi": "marcas/audi.html",
-        "ferrari": "marcas/ferrari.html",
+        const rotas = {
+            "toyota": "marcas/toyota.html",
+            "volkswagen": "marcas/volks.html",
+            "ford": "marcas/ford.html",
+            "chevrolet": "marcas/chevy.html",
+            "chevy": "marcas/chevy.html",
+            "honda": "marcas/honda.html",
+            "mercedes": "marcas/mercedes.html",
+            "mercedes-benz": "marcas/mercedes.html",
+            "bmw": "marcas/bmw.html",
+            "hyundai": "marcas/hyundai.html",
+            "audi": "marcas/audi.html",
+            "ferrari": "marcas/ferrari.html",
 
-        "hatch": "categorias/hatch.html",
-        "hatchback": "categorias/hatch.html",
-        "sedã": "categorias/seda.html",
-        "sedan": "categorias/seda.html",
-        "suv": "categorias/suv.html",
-        "crossover": "categorias/crossover.html",
-        "picape": "categorias/picape.html",
-        "pickup": "categorias/picape.html",
-        "coupé": "categorias/coupe.html",
-        "coupe": "categorias/coupe.html",
-        "conversível": "categorias/conversivel.html",
-        "conversivel": "categorias/conversivel.html",
-        "minivan": "categorias/minivan.html",
-        "perua": "categorias/perua.html",
-        "esportivo": "categorias/esportivos.html",
-        "esportivos": "categorias/esportivos.html",
-        "carros esportivos": "categorias/esportivos.html"
-    };
+            "hatch": "categorias/hatch.html",
+            "hatchback": "categorias/hatch.html",
+            "sedã": "categorias/seda.html",
+            "sedan": "categorias/seda.html",
+            "suv": "categorias/suv.html",
+            "crossover": "categorias/crossover.html",
+            "picape": "categorias/picape.html",
+            "pickup": "categorias/picape.html",
+            "coupé": "categorias/coupe.html",
+            "coupe": "categorias/coupe.html",
+            "conversível": "categorias/conversivel.html",
+            "conversivel": "categorias/conversivel.html",
+            "minivan": "categorias/minivan.html",
+            "perua": "categorias/perua.html",
+            "esportivo": "categorias/esportivos.html",
+            "esportivos": "categorias/esportivos.html",
+            "carros esportivos": "categorias/esportivos.html"
+        };
 
-    function normalizarTexto(texto) {
-        return texto
-            .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "")
-            .toLowerCase();
-    }
-
-    function pesquisar() {
-        const entrada = document.getElementById("campoBusca").value;
-        const textoNormalizado = normalizarTexto(entrada);
-
-        // Detecta se está em uma subpasta
-        const caminhoAtual = window.location.pathname;
-        const estaEmSubpasta = caminhoAtual.includes("/categorias/") || caminhoAtual.includes("/marcas/");
-
-        for (const termo in rotas) {
-            if (normalizarTexto(termo).includes(textoNormalizado)) {
-                const caminho = estaEmSubpasta ? `../${rotas[termo]}` : rotas[termo];
-                window.location.href = caminho;
-                return false;
-            }
+        function normalizarTexto(texto) {
+            return texto
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .toLowerCase();
         }
 
-        alert("Nenhuma marca ou categoria encontrada.");
-        return false;
-    }
-</script>
+        function pesquisar() {
+            const entrada = document.getElementById("campoBusca").value;
+            const textoNormalizado = normalizarTexto(entrada);
+
+            // Detecta se está em uma subpasta
+            const caminhoAtual = window.location.pathname;
+            const estaEmSubpasta = caminhoAtual.includes("/categorias/") || caminhoAtual.includes("/marcas/");
+
+            for (const termo in rotas) {
+                if (normalizarTexto(termo).includes(textoNormalizado)) {
+                    const caminho = estaEmSubpasta ? `../${rotas[termo]}` : rotas[termo];
+                    window.location.href = caminho;
+                    return false;
+                }
+            }
+
+            alert("Nenhuma marca ou categoria encontrada.");
+            return false;
+        }
+    </script>
 
 
 </body>
