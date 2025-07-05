@@ -16,6 +16,7 @@ html {
     height: 100vh;
     width: 100vw; 
     overflow: hidden; 
+    padding: 1rem;
 }
 
 .centro img{
