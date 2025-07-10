@@ -26,3 +26,13 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+.logo-sobreposta {
+    position: absolute;
+    top: -80px; /* ou ajuste como preferir */
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px; /* ajuste conforme a logo */
+    z-index: 10;
+    opacity: 0.9;
+}
