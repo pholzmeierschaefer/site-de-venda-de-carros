@@ -74,16 +74,19 @@
     </nav>
 
     <main>
-
-
         <section class="centralizar-section">
             <div class="container position-relative my-5">
-                
+
+                <div class="d-flex justify-content-center">
+                    <img src="../imagens/logos de marcas/volkswagen-logo.png" alt="Logo Volkswagen" class="logo-topo">
+                </div>
+
                 <div class="row justify-content-center gx-4 gy-4">
 
                     <div class="col-md-3">
                         <div class="card h-100">
-                            <img src="../imagens/marcas/volkswagen/Polo.png" class="card-img-top" alt="" height="150" style="object-fit: cover;">
+                            <img src="../imagens/marcas/volkswagen/Polo.png" class="card-img-top" alt="" height="150"
+                                style="object-fit: cover;">
                             <div class="card-body d-flex flex-column">
 
                                 <h5 class="card-title">VW Polo</h5>
@@ -96,7 +99,8 @@
 
                     <div class="col-md-3">
                         <div class="card h-100">
-                            <img src="../imagens/marcas/volkswagen/VW_Virtus.png" class="card-img-top" alt="" height="150" style="object-fit: cover;">
+                            <img src="../imagens/marcas/volkswagen/VW_Virtus.png" class="card-img-top" alt=""
+                                height="150" style="object-fit: cover;">
                             <div class="card-body d-flex flex-column">
 
                                 <h5 class="card-title">VW Virtus</h5>
@@ -109,7 +113,8 @@
 
                     <div class="col-md-3">
                         <div class="card h-100">
-                            <img src="../imagens/marcas/volkswagen/tcross_.webp" class="card-img-top" alt="" height="150" style="object-fit: cover;">
+                            <img src="../imagens/marcas/volkswagen/tcross_.webp" class="card-img-top" alt=""
+                                height="150" style="object-fit: cover;">
                             <div class="card-body d-flex flex-column">
 
                                 <h5 class="card-title">VW T-Cross</h5>
@@ -122,7 +127,8 @@
 
                     <div class="col-md-3">
                         <div class="card h-100">
-                            <img src="../imagens/marcas/volkswagen/amarok.png" class="card-img-top" alt="" height="150" style="object-fit: cover;">
+                            <img src="../imagens/marcas/volkswagen/amarok.png" class="card-img-top" alt="" height="150"
+                                style="object-fit: cover;">
                             <div class="card-body d-flex flex-column">
 
                                 <h5 class="card-title">VW Amarok</h5>
@@ -143,66 +149,66 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
 
-   <script>
-    const rotas = {
-        "toyota": "marcas/toyota.html",
-        "volkswagen": "marcas/volks.html",
-        "ford": "marcas/ford.html",
-        "chevrolet": "marcas/chevy.html",
-        "chevy": "marcas/chevy.html",
-        "honda": "marcas/honda.html",
-        "mercedes": "marcas/mercedes.html",
-        "mercedes-benz": "marcas/mercedes.html",
-        "hyundai": "marcas/hyundai.html",
-        "audi": "marcas/audi.html",
-        "ferrari": "marcas/ferrari.html",
+    <script>
+        const rotas = {
+            "toyota": "marcas/toyota.html",
+            "volkswagen": "marcas/volks.html",
+            "ford": "marcas/ford.html",
+            "chevrolet": "marcas/chevy.html",
+            "chevy": "marcas/chevy.html",
+            "honda": "marcas/honda.html",
+            "mercedes": "marcas/mercedes.html",
+            "mercedes-benz": "marcas/mercedes.html",
+            "hyundai": "marcas/hyundai.html",
+            "audi": "marcas/audi.html",
+            "ferrari": "marcas/ferrari.html",
 
-        "hatch": "categorias/hatch.html",
-        "hatchback": "categorias/hatch.html",
-        "sedã": "categorias/seda.html",
-        "sedan": "categorias/seda.html",
-        "suv": "categorias/suv.html",
-        "crossover": "categorias/crossover.html",
-        "picape": "categorias/picape.html",
-        "pickup": "categorias/picape.html",
-        "coupé": "categorias/coupe.html",
-        "coupe": "categorias/coupe.html",
-        "conversível": "categorias/conversivel.html",
-        "conversivel": "categorias/conversivel.html",
-        "minivan": "categorias/minivan.html",
-        "perua": "categorias/perua.html",
-        "esportivo": "categorias/esportivos.html",
-        "esportivos": "categorias/esportivos.html",
-        "carros esportivos": "categorias/esportivos.html"
-    };
+            "hatch": "categorias/hatch.html",
+            "hatchback": "categorias/hatch.html",
+            "sedã": "categorias/seda.html",
+            "sedan": "categorias/seda.html",
+            "suv": "categorias/suv.html",
+            "crossover": "categorias/crossover.html",
+            "picape": "categorias/picape.html",
+            "pickup": "categorias/picape.html",
+            "coupé": "categorias/coupe.html",
+            "coupe": "categorias/coupe.html",
+            "conversível": "categorias/conversivel.html",
+            "conversivel": "categorias/conversivel.html",
+            "minivan": "categorias/minivan.html",
+            "perua": "categorias/perua.html",
+            "esportivo": "categorias/esportivos.html",
+            "esportivos": "categorias/esportivos.html",
+            "carros esportivos": "categorias/esportivos.html"
+        };
 
-    function normalizarTexto(texto) {
-        return texto
-            .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "")
-            .toLowerCase();
-    }
-
-    function pesquisar() {
-        const entrada = document.getElementById("campoBusca").value;
-        const textoNormalizado = normalizarTexto(entrada);
-
-        // Detecta se está em uma subpasta
-        const caminhoAtual = window.location.pathname;
-        const estaEmSubpasta = caminhoAtual.includes("/categorias/") || caminhoAtual.includes("/marcas/");
-
-        for (const termo in rotas) {
-            if (normalizarTexto(termo).includes(textoNormalizado)) {
-                const caminho = estaEmSubpasta ? `../${rotas[termo]}` : rotas[termo];
-                window.location.href = caminho;
-                return false;
-            }
+        function normalizarTexto(texto) {
+            return texto
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .toLowerCase();
         }
 
-        alert("Nenhuma marca ou categoria encontrada.");
-        return false;
-    }
-</script>
+        function pesquisar() {
+            const entrada = document.getElementById("campoBusca").value;
+            const textoNormalizado = normalizarTexto(entrada);
+
+            // Detecta se está em uma subpasta
+            const caminhoAtual = window.location.pathname;
+            const estaEmSubpasta = caminhoAtual.includes("/categorias/") || caminhoAtual.includes("/marcas/");
+
+            for (const termo in rotas) {
+                if (normalizarTexto(termo).includes(textoNormalizado)) {
+                    const caminho = estaEmSubpasta ? `../${rotas[termo]}` : rotas[termo];
+                    window.location.href = caminho;
+                    return false;
+                }
+            }
+
+            alert("Nenhuma marca ou categoria encontrada.");
+            return false;
+        }
+    </script>
 </body>
 
 </html>
