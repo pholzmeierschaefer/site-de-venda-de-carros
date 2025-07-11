@@ -25,3 +25,8 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+.logo-topo {
+    width: 120px; /* ou outro valor que preferir */
+    margin-bottom: 20px;
+}
