@@ -29,10 +29,10 @@ main {
 
 .logo-sobreposta {
     position: absolute;
-    top: -80px; /* ou ajuste como preferir */
+    top: -80px; 
     left: 50%;
     transform: translateX(-50%);
-    height: 100px; /* ajuste conforme a logo */
+    height: 100px; 
     z-index: 10;
     opacity: 0.9;
 }
