@@ -1,0 +1,40 @@
+.noticia-container {
+    max-width: 700px;
+    margin: 60px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.noticia-container p {
+    margin-bottom: 24px;
+    text-align: justify;
+}
+
+
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.tamanho {
+    font-size: 20px;
+}
+
+.centro {
+    text-align: center;
+}
+
+section {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.justificado {
+    text-align: justify;
+}
